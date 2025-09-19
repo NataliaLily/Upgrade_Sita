@@ -6,5 +6,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'dashboard']);
+route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'dashboard']);
 
