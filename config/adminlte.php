@@ -319,7 +319,7 @@ return [
         ],
         [
             'text' => 'Tugas Akhir',
-            'url' => '#',
+            'url' => '/tugasakhir/index',
             'icon' => 'fas fa-fw fa-book',
         ],
         [
