@@ -12,6 +12,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
+                    <a href="/tugasakhir/add" class="btn btn-primary">Tambah Tugas Akhir</a>
                     <table class="table">
                         <thead>
                             <tr>
@@ -28,7 +29,8 @@
                         <tbody>
                             @foreach ($tugasAkhirs as $index => $ta)
                                 <tr>
-                                    <td>{{ $loop->iteration + ($tugasAkhirs->currentPage() - 1) * $tugasAkhirs->perPage() }}</td>
+                                    <td>{{ $loop->iteration + ($tugasAkhirs->currentPage() - 1) * $tugasAkhirs->perPage() }}
+                                    </td>
                                     <td>{{ $ta->mahasiswa ? $ta->mahasiswa->no_mhs : '-' }}</td>
                                     <td>{{ $ta->akdsem }}</td>
                                     <td>{{ $ta->judul_tugas_akhir }}</td>
@@ -37,7 +39,8 @@
                                     <td>{{ $ta->jadwal_ujian ?? '-' }}</td>
                                     <td>
                                         <a href="/tugasakhir/{{ $ta->id }}/edit" class="btn btn-primary btn-sm">Edit</a>
-                                        <a href="/tugasakhir/{{ $ta->id }}/delete" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this item?');">Delete</a>
+                                        <a href="/tugasakhir/{{ $ta->id }}/delete" class="btn btn-danger btn-sm"
+                                            onclick="return confirm('Are you sure you want to delete this item?');">Delete</a>
                                 </tr>
                             @endforeach
                         </tbody>
